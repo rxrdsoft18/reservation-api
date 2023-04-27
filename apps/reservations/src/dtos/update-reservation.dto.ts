@@ -1,4 +1,4 @@
-import { CreateReservation } from './create-reservation';
+import { CreateReservationDto } from './create-reservation.dto';
 import { PartialType } from '@nestjs/mapped-types';
 
-export class UpdateReservation extends PartialType(CreateReservation) {}
+export class UpdateReservationDto extends PartialType(CreateReservationDto) {}
