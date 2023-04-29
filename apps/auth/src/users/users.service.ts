@@ -1,9 +1,8 @@
 import {
   BadRequestException,
   Injectable,
-  NotFoundException,
-  UnauthorizedException
-} from "@nestjs/common";
+  UnauthorizedException,
+} from '@nestjs/common';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UsersRepository } from './users.repository';
 import * as bcrypt from 'bcrypt';
