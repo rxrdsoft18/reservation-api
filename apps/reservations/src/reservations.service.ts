@@ -20,7 +20,6 @@ export class ReservationsService {
       })
       .pipe(
         map((res) => {
-          console.log('res', res);
           return this.reservationsRepository.create({
             ...createReservationDto,
             invoiceId: res.id,
@@ -29,11 +28,6 @@ export class ReservationsService {
           });
         }),
       );
-    // return this.reservationsRepository.create({
-    //   ...data,
-    //   timestamp: new Date(),
-    //   userId: user._id,
-    // });
   }
   async findAll() {
     return this.reservationsRepository.find({});
