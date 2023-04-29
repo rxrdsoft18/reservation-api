@@ -35,3 +35,4 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 apps/reservations/.env
+apps/auth/.env
