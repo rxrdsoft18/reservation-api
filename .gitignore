@@ -36,3 +36,4 @@ lerna-debug.log*
 
 apps/reservations/.env
 apps/auth/.env
+apps/payments/.env

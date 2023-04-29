@@ -25,11 +25,11 @@ import { SharedModule } from '@app/shared/shared.module';
       validationSchema: configSchema,
     }),
     SharedModule.registerTCP(AUTH_SERVICE, 'AUTH_HOST', 'AUTH_PORT'),
-    // SharedModule.registerTCP(
-    //   PAYMENTS_SERVICE,
-    //   'PAYMENTS_HOST',
-    //   'PAYMENTS_PORT',
-    // ),
+    SharedModule.registerTCP(
+      PAYMENTS_SERVICE,
+      'PAYMENTS_HOST',
+      'PAYMENTS_PORT',
+    ),
   ],
   controllers: [ReservationsController],
   providers: [ReservationsService, ReservationsRepository],

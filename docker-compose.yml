@@ -10,36 +10,48 @@ services:
     volumes:
       - sleepr-data:/data/db
 
-#  reservations:
-#    build:
-#        context: ./
-#        dockerfile: ./apps/reservations/Dockerfile
-#        target: development
-#
-#    command: npm run start:dev reservations
-#    env_file:
-#      - ./apps/reservations/.env
-#    ports:
-#      - "3000:3000"
-#    volumes:
-#      - .:/usr/src/app
-#      - /usr/src/app/node_modules
-#
-#  auth:
-#    build:
-#      context: ./
-#      dockerfile: ./apps/auth/Dockerfile
-#      target: development
-#
-#    command: npm run start:dev auth
-#    env_file:
-#      - ./apps/auth/.env
-#    ports:
-#      - "3001:3001"
-#    volumes:
-#      - .:/usr/src/app
-#      - /usr/src/app/node_modules
+  reservations:
+    build:
+        context: ./
+        dockerfile: ./apps/reservations/Dockerfile
+        target: development
 
+    command: npm run start:dev reservations
+    env_file:
+      - ./apps/reservations/.env
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  auth:
+    build:
+      context: ./
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+
+    command: npm run start:dev auth
+    env_file:
+      - ./apps/auth/.env
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  payments:
+    build:
+      context: ./
+      dockerfile: ./apps/payments/Dockerfile
+      target: development
+
+    command: npm run start:dev payments
+    env_file:
+      - ./apps/payments/.env
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
 
 volumes:
   sleepr-data:
